@@ -5,7 +5,7 @@ import iziToast from "izitoast"
 import "izitoast/dist/css/iziToast.min.css";
 
 const startButton = document.querySelector('button[data-start]');
-const timeInput = document.querySelector('datetime-picker');
+const timeInput = document.querySelector('#datetime-picker');
 const timerDays = document.querySelector('span[data-days]');
 const timerHours = document.querySelector('span[data-hours]');
 const timerMins = document.querySelector('span[data-minutes]');
@@ -15,6 +15,10 @@ let userSelectedDate;
 let timerId = null;
 let isTimerActive = false;
 startButton.disabled = true;
+
+if (startButton) {
+  startButton.disabled = true;
+}
 
 const options = {
     enableTime: true,
