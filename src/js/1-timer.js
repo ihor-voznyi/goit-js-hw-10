@@ -42,8 +42,8 @@ startButton.addEventListener('click', startTimer);
 
 function startTimer() {
   isTimerActive = true;
-  startButton.disabled = true;
-  timeInput.disabled = true;
+  startButton.disabled = false;
+  timeInput.disabled = false;
 
   timerId = setInterval(() => {
     const currentTime = new Date();
